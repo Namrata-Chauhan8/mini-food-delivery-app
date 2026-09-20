@@ -205,15 +205,13 @@ gutters scale with the screen.
 
 ## Screenshots / Demo
 
-<!-- Add screenshots or a short screen recording here before submitting. -->
-
 | Home | Restaurant | Cart |
 |---|---|---|
-| _screenshot_ | _screenshot_ | _screenshot_ |
+| ![Home](docs/screenshots/Home.jpeg) | ![Restaurant](docs/screenshots/Resturant.jpeg) | ![Cart](docs/screenshots/Cart.jpeg) |
 
 | Checkout | Tracking | History |
 |---|---|---|
-| _screenshot_ | _screenshot_ | _screenshot_ |
+| ![Checkout](docs/screenshots/Checkout.jpeg) | ![Tracking](docs/screenshots/TrackingOrder.jpeg) | ![History](docs/screenshots/OrderHistory.jpeg) |
 
 ---
 
