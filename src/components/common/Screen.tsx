@@ -2,6 +2,7 @@ import { ReactNode } from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
 import { Edge, SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../../theme/ThemeProvider';
+import { OfflineBanner } from './OfflineBanner';
 
 type ScreenProps = {
   children: ReactNode;
@@ -15,6 +16,7 @@ export function Screen({ children, edges = ['top'], padded = false, style }: Scr
 
   return (
     <SafeAreaView edges={edges} style={{ flex: 1, backgroundColor: theme.colors.bg }}>
+      <OfflineBanner />
       <View
         style={[
           { flex: 1 },

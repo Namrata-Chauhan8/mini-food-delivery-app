@@ -19,7 +19,7 @@ export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
     <Screen edges={[]}>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
         keyboardVerticalOffset={Platform.OS === 'ios' ? 96 : 0}
       >
         <ScrollView
@@ -39,36 +39,12 @@ export function AuthLayout({ title, subtitle, children }: AuthLayoutProps) {
           </View>
 
           {children}
-
-          <DemoNotice />
         </ScrollView>
       </KeyboardAvoidingView>
     </Screen>
   );
 }
 
-/** Honest label: there is no server here, and the password is not protected. */
-function DemoNotice() {
-  const theme = useTheme();
-
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        gap: theme.spacing.sm,
-        padding: theme.spacing.md,
-        borderRadius: theme.radius.md,
-        backgroundColor: theme.colors.surfaceAlt,
-      }}
-    >
-      <Ionicons name="information-circle-outline" size={18} color={theme.colors.textMuted} />
-      <Text variant="small" color="textMuted" style={{ flex: 1, lineHeight: 19 }}>
-        Demo accounts are stored on this device only — there is no server and nothing is
-        encrypted. Please don&apos;t use a real password.
-      </Text>
-    </View>
-  );
-}
 
 /** Form-level error shown above the submit button, for failures no single field owns. */
 export function FormError({ message }: { message: string | undefined }) {

@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import { View } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { OfflineBanner } from '../src/components/common/OfflineBanner';
 import { useHydration } from '../src/hooks/useHydration';
 import { selectIsSignedIn, useAuthStore } from '../src/store/authStore';
 import { ThemeProvider, useTheme } from '../src/theme/ThemeProvider';
@@ -26,7 +25,6 @@ function RootNavigator() {
   return (
     <View style={{ flex: 1, backgroundColor: theme.colors.bg }}>
       <StatusBar style={theme.dark ? 'light' : 'dark'} />
-      <OfflineBanner />
 
       <Stack
         screenOptions={{
